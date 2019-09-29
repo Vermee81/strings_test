@@ -5,7 +5,8 @@ import (
 	"testing"
 )
 
-func Test_ToUpper(t *testing.T) {
+// TestToUpper はstringsのToUpperのテスト
+func TestToUpper(t *testing.T) {
 	tests := []struct {
 		input, expected string
 	}{
