@@ -14,9 +14,12 @@ func Test_ToUpper(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		result := strings.ToUpper(tt.input)
-		if tt.expected != result {
-			t.Errorf("expected %v, but %v", tt.expected, result)
-		}
+		tt := tt
+		t.Run(tt.input, func(t *testing.T) {
+			result := strings.ToUpper(tt.input)
+			if tt.expected != result {
+				t.Errorf("expected %v, but %v", tt.expected, result)
+			}
+		})
 	}
 }
